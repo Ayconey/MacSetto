@@ -1,0 +1,17 @@
+#set{
+    padding-top: 2%;
+    text-align: center;
+}
+#setItems{
+    padding-top: 3%;
+}
+#sum {
+    padding-top: 5%;
+    padding-bottom: 5%;
+}
+#filter h1{
+    padding-bottom: 2%;
+}
+#main {
+    text-align: center;
+}

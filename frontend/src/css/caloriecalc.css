@@ -1,0 +1,20 @@
+#meal{
+    text-align: center;
+}
+#meal h2{
+    margin-bottom: 5%;
+}
+#res{
+    margin-top: 10%;
+    text-align: center;
+}
+#res h3{
+    padding-top: 1%;
+}
+#btsButton {
+    background-color: rgb(196, 194, 86);
+    border: solid rgb(196, 194, 86) 3px ;
+}
+#products {
+    margin-top: 5%;
+}

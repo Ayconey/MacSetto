@@ -1,0 +1,21 @@
+li {
+    display: inline;
+    padding-right: 8%;
+  }
+a {
+    text-decoration: none;
+    color:inherit;
+}
+#navbar{
+    background-color: rgb(196, 194, 86);
+    margin-bottom: 4%;
+    padding:1%;
+}
+#Nav{
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 10%;
+}
+#logo{
+    padding-left: 10%;
+}

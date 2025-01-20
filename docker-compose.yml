@@ -1,0 +1,34 @@
+version: "3.9"
+
+services:
+  db:
+    image: postgres
+    environment:
+      - POSTGRES_DB=mcSet
+      - POSTGRES_USER=mcSet
+      - POSTGRES_PASSWORD=mysecretpassword
+    ports:
+      - "5432:5432"
+  backend:
+    build: backend
+    command: sh -c "python backend/wait_for_db.py && python backend/manage.py migrate && python backend/manage.py migrate && python backend/manage.py runserver 0.0.0.0:8000"
+    volumes:
+      - .:/code/
+    environment:
+      - DEBUG=1
+      - SECRET_KEY=foo
+      - ALLOWED_HOSTS=127.0.0.1,localhost
+      - DB_HOST=db
+      - DB_NAME=mcSet
+      - DB_USER=mcSet
+      - DB_PASS=mysecretpassword
+    ports:
+      - "8000:8000"
+    depends_on:
+      - db
+  frontend:
+    build: frontend
+    ports:
+      - "3000:3000"
+    stdin_open: true
+    tty: true

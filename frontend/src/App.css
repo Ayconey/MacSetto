@@ -1,0 +1,19 @@
+@font-face {
+  font-family: 'Cool';
+  src: local('Cool'), url(./fonts/coolvetica.otf) format('opentype');
+  
+  /* other formats include: 'woff2', 'truetype, 'opentype',
+                            'embedded-opentype', and 'svg' */
+  font-weight:lighter;
+}
+
+body {
+  font-family: 'Cool','Helvetica';
+  background-color: black;
+  color:white;
+}
+
+.App {
+  text-align: center;
+}
+
