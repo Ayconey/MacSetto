@@ -1,9 +1,25 @@
 ![banner](/screenshots/banner.png "")
 # MacSet
-App written for portfolio purpouses, about US Mcdonald's menu using data provided by McDonald's on kaggle, https://www.kaggle.com/datasets/mcdonalds/nutrition-facts
-
-I mainly focus on functionality, not on the look of the site.
+App about US Mcdonald's menu using data provided by McDonald's on kaggle, https://www.kaggle.com/datasets/mcdonalds/nutrition-facts
+I mainly focused on functionality, not on the look of the site.
 Ready to deployment with docker-compose.
+# Instalation
+1. docker-compose build
+2. docker-compose up
+3. connect to postgresql database(in my case with dbeaver), default credentials:
+```python
+DATABASES = {
+    "default": {
+        "ENGINE": 'django.db.backends.postgresql',
+        "NAME": os.environ.get("DB_NAME",'mcSet'),
+        "USER": os.environ.get("DB_USER", "mcSet"),
+        "PASSWORD": os.environ.get("DB_PASS", "mysecretpassword"),
+        "HOST": 'db',
+        "PORT": '5432',
+    }
+}
+```
+4. copy the file from backend/data/menu.csv and insert it into table menu_product.
 # 3 Main Functionalities :hammer:
 - Calorie Calculator, you can add your order and page will calculate all the macro and micro nutritions about your meal.
 - Menu itself, with all the nutritions and search filter.
